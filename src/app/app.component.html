@@ -1,0 +1,39 @@
+<h1 class="text-center">registrador de empleados</h1>
+<form class="w-50 mx-auto">
+  <div class="col">
+    <div class="row">
+      nombre: <input type="text" name="nombre" [(ngModel)]="nombre" class="form-control"/>
+    </div>
+  </div>
+  <div class="row">
+    apellido: <input type="text" name="apellido" [(ngModel)]="apellido" class="form-control"/>
+  </div>
+  <div class="row">
+    cargo:
+    <input type="text" name="cargo" [(ngModel)]="cargo" class="form-control"/>
+  </div>
+  <div class="row">
+    salario:
+    <input type="text" name="salario" [(ngModel)]="salario" class="form-control"/>
+  </div>
+  <div class="row">
+    <input
+      type="submit"
+      value="Agregar empleado"
+      class="btn btn-primary mt-1"
+      (click)="addEmpleado()"
+    />
+  </div>
+</form>
+
+<div class="container w-50 mt-5">
+  <div class="row">
+    <h2>Empleados</h2>
+    <div class="col">
+      <div *ngFor="let empleado of empleados; let i = index">
+        {{ i + 1 }}. {{ empleado.nombre }} {{ empleado.apellido }}
+        {{ empleado.cargo }} {{ empleado.salario }}
+      </div>
+    </div>
+  </div>
+</div>
