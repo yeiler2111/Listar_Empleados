@@ -1,0 +1,50 @@
+<p>actualiza-component works!</p>
+<form class="w-50 mx-auto">
+  <div class="col">
+    <div class="row">
+      nombre:
+      <input
+        type="text"
+        name="nombre"
+        [(ngModel)]="nombre"
+        class="form-control"
+      />
+    </div>
+  </div>
+  <div class="row">
+    apellido:
+    <input
+      type="text"
+      name="apellido"
+      [(ngModel)]="apellido"
+      class="form-control"
+    />
+  </div>
+  <div class="row">
+    cargo:
+    <input type="text" name="cargo" [(ngModel)]="cargo" class="form-control" />
+  </div>
+  <div class="row">
+    salario:
+    <input
+      type="text"
+      name="salario"
+      [(ngModel)]="salario"
+      class="form-control"
+    />
+  </div>
+  <div class="row">
+    <input
+      type="submit"
+      value="actualizar empleado"
+      class="btn btn-warning mt-1"
+      (click)="modificarEmpleado()"
+    />
+    <!-- <input
+      type="submit"
+      value="eliminar empleado"
+      class="btn btn-danger mt-1"
+      (click)="eliminaEmpleado()"
+    /> -->
+  </div>
+</form>

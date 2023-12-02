@@ -9,7 +9,7 @@ import { Component, EventEmitter, Output } from '@angular/core';
 export class CaracteristicasEmpleadosCComponent {
   @Output() caracteristicasEmpleados = new EventEmitter<string>()
   addNewItem(value: string){
-    this.caracteristicasEmpleados.emit(value
-      )
+    // this.caracteristicasEmpleados.emit(value
+    //   )
   }
 }

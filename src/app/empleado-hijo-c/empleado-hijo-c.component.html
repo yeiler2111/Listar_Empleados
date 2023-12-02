@@ -5,7 +5,12 @@
         {{ indice + 1 }}. {{ empleadoDeLista.nombre }}
         {{ empleadoDeLista.apellido }} {{ empleadoDeLista.cargo }}
         {{ empleadoDeLista.salario }}
+        <a [routerLink]="['/actualizar', indice]" [queryParams]="{accion:'1'}"> Actualiza</a>
+        &nbsp;&nbsp;
+        <a [routerLink]="['/actualizar', indice]" [queryParams]="{accion:'2'}"> Elimina</a>
+
       </div>
+
       <ul style="list-style: none">
         <li *ngFor="let caracteristica of arrayCaracteristicas">
           {{ caracteristica }}
